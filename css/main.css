@@ -1,4 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+:root {
+
+    /* Variaveis de fonte */
+    --fonte-principal: "Ubuntu", sans-serif;
+    --fonte-secundaria: "Sigmar", sans-serif;
+    --fonte-gigante: 100px;
+    --fonte-grande: 70px;
+    --fonte-media: 40px;
+    /* Variaveis de fonte */
+
+    /* Variaveis de cor */
+    --cor-primaria: #293241ff;
+    --cor-secundaria: #3d5a80ff;
+    --cor-terciaria: #1a73a7;
+    --destaque: #e0fbfcff;
+    --destaque-secundario: #ee6c4dff;
+    --preto: #0d1321;
+    --branco: #f9f7f3;
+    /* Variaveis de cor */
+}
 
 * {
     padding: 0;
@@ -6,42 +28,84 @@
     box-sizing: border-box;
 }
 
-.card{
+.card {
     width: 420px;
     display: flex;
-    background-color: #4F5D75;
+    background-color: var(--cor-secundaria);
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     margin: 10px;
-    border-radius: 12px;
+    border-radius: 8px;
+    /* Borda mais simples */
     font-family: "Ubuntu", sans-serif;
-    color: whitesmoke;
+    color: var(--branco);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Adiciona a animação suave */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Aumenta o card ao passar o mouse */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    /* Adiciona sombra para o efeito de profundidade */
 }
 
 .card img {
     width: 400px;
-   height: 300px;
-   border-radius: 12px
+    height: 300px;
+    border-radius: 8px;
+    /* Borda mais simples também na imagem */
 }
 
-#card-container{
+#card-container {
     display: flex;
     justify-content: space-around;
-    background-color:#2D3142;
+    background-color: var(--preto);
 }
 
-.card button{
+.card button {
     width: 40%;
     padding: 5px;
-    border-radius: 10px; 
+    border-radius: 10px;
     font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
 }
 
-main{
-    background-color: #2D3142;
+main {
+    background-color: var(--cor-primaria);
     font-family: "Ubuntu", sans-serif;
-    color: whitesmoke;
+    color: var(--branco);
 }
 
+.banner {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--cor-terciaria);
+}
+
+.banner img {
+    grid-column: 2/6;
+    grid-row: 2/6;
+}
+
+.banner .texto-foco {
+    grid-column: 7/11;
+    grid-row: 2/5;
+    text-align: center;
+    font-size: var(--fonte-grande);
+    font-family: var(--fonte-secundaria);
+}
+
+.banner .texto-secundario {
+    grid-column: 7/11;
+    grid-row: 4/5;
+    text-align: center;
+    font-size: var(--fonte-media);
+    font-family: var(--fonte-principal);
+}
+
+
+/* replicando banner com flex. */
  
