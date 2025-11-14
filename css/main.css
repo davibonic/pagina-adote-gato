@@ -16,7 +16,7 @@
     --cor-secundaria: #3d5a80ff;
     --cor-terciaria: #1a73a7;
     --destaque: #e0fbfcff;
-    --destaque-secundario: #ee6c4dff;
+    --destaque-secundario: #ca735d;
     --preto: #0d1321;
     --branco: #f9f7f3;
     /* Variaveis de cor */
@@ -138,4 +138,64 @@ main {
     .barra-navegacao {
         background-color: var(--cor-primaria) !important;
     }
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    margin: 20px 0;
+    padding: 20px;
+}
+
+footer .container-footer {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+footer #layer1-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer .footer-line {
+    margin-top: 30px;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icon:hover {
+    transform: scale(1);
+}
+.logo-footer{ height: 60px; }
+
+.texto1-footer{
+    font-size: 20px;
+}
+.texto2-footer{
+    font-size: 20px;
 }
